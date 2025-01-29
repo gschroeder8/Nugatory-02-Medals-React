@@ -41,12 +41,22 @@
 }
 
 .medals {
-  margin: .5rem;
-  border-radius: .5rem;
-  border: black solid 1px;
-  background: #efefef;
-  width: 16rem;
+  display: flex;
+  gap: 1rem; /* space between the cards */
+  flex-wrap: wrap; /* allows cards to wrap to the next line if they don’t fit */
+  padding: 1rem; /* optional padding around the entire container */
 }
+
+.country-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  width: 200px; /* sets a consistent card size */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* adds a subtle shadow */
+}
+
 
 
 .h2 {

@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 
-function Country() {
-  const [name] = useState('United States');
-  const [gold, setGold] = useState(0);
-
-  const handleClick = () => {
-    setGold((prevGold) => prevGold + 1);
-  };
-
+function Country({ country, onDelete }) {
   return (
     <div className="country-card">
-      <h2 className="border-bottom pb-1">{name}</h2>
-      <p>Gold Medals: {gold}</p>
-      <button className="mb-1" onClick={handleClick}>+</button>
+      <h2 className="border-bottom pb-1">{country.name}</h2>
+      <p>Gold Medals: {country.gold}</p>
+      <button className="mb-1" onClick={() => onDelete(country.id)}>🗑️</button>
     </div>
   );
 }
